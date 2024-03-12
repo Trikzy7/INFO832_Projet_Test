@@ -22,7 +22,7 @@ public class DiscreteAction implements DiscreteActionInterface {
 	private Object object;
 	private Method method;
 	
-	
+//	prout
 	private Timer timmer;				// timer provides new lapsTime
 	//private TreeSet<Integer> dates;	// obsolete, managed in timer 
 	//private Vector<Integer> lapsTimes;// obsolete, managed in timer
