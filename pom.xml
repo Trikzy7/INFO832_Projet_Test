@@ -13,6 +13,10 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
+        <sonar.projectKey>INFO832_theo</sonar.projectKey>
+        <sonar.login>sqp_e363ec75af0e797ff6a064b4db45eaaa5deab55d</sonar.login>
+
     </properties>
 
     <build>
