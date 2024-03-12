@@ -12,10 +12,22 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
+        <sonar.login>theo</sonar.login>
+        <sonar.password>theo</sonar.password>
+
     </properties>
 
     <build>
         <plugins>
+
+            <!-- Ajoutez le plugin SonarQube -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -31,6 +43,7 @@
 
         </plugins>
     </build>
+
 
     <dependencies>
         <dependency>
