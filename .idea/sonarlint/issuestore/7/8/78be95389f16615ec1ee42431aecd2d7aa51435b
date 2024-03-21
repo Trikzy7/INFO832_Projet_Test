@@ -1,0 +1,11 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(í‹®ò
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(º¨÷…
+~
+java:S1319"hThe type of "dates" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(ğ»°‹
+{
+java:S1149	"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Óó£
+€
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(‡îØşøÿÿÿÿ
