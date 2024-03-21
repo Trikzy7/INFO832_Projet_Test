@@ -13,3 +13,13 @@ T
 $src/main/java/timer/RandomTimer.java,c\a\ca235faacd3ca9ef1f98d5084d04c0a8b1a5bd2a
 X
 (src/test/java/timer/RandomTimerTest.java,7\8\784d63ea2b4d8a2ccaab480bb4f7ecab8c5e7e7e
+X
+(src/test/java/timer/MergedTimerTest.java,7\2\726c4e33ad99bbf8af60c7f9b1609797cb166a4d
+Y
+)src/test/java/timer/OneShotTimerTest.java,2\6\26d7862f394c4cb4b911f60843a17a30dc47e409
+Z
+*src/test/java/timer/PeriodicTimerTest.java,b\e\be4f65a96cafe8300cd2cea1325df32238341095
+Y
+)src/main/java/timer/TimeBoundedTimer.java,d\8\d8ef8bbea1e8f36f13c0e171b7c91d331eee94d4
+]
+-src/test/java/timer/TimeBoundedTimerTest.java,a\5\a58df6a871ca5e3f9f472bc5fda4ebe7554eb5ab
