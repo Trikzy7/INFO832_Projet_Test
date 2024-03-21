@@ -3,6 +3,10 @@ package action;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+
 import org.junit.Before;
 import org.junit.Test;
 import timer.Timer;
@@ -82,4 +86,13 @@ public class DiscreteActionTest {
                 mockTimer.next(), newLapsTime);*/ //Waiting for mock in pom.xml
     }
 
-}
+    @Test
+    public void testCompareToWithNullCurrentLapsTime() {
+        DiscreteAction actionWithNullLapsTime = new DiscreteAction(testObject, methodName, timer);
+        DiscreteAction anotherAction = new DiscreteAction(testObject, methodName, timer);
+        int comparisonResult = actionWithNullLapsTime.compareTo(anotherAction);
+        assertEquals("Un lapsTime null devrait être considéré comme infini et donc supérieur", 1, comparisonResult);
+        System.out.println("Le test testCompareToWithNullCurrentLapsTime a été exécuté avec succès. Résultat de la comparaison : " + comparisonResult);
+    }
+    }
+
