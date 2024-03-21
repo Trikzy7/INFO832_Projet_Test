@@ -23,4 +23,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="e1153bdb-0cd6-4e03-a623-a6dd123ee96d" />
+  </component>
 </module>
