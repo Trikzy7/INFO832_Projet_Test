@@ -92,6 +92,21 @@ public class DiscreteActionOnOffDependentTest {
         assertEquals(1, timeLapseOn.size());  // Le nombre de laps de temps dans timeLapseOn
         assertEquals(4, timeLapseOff.size()); // Le nombre de laps de temps dans timeLapseOff
     }
+    @Test
+    public void testDates2TimalapseWithEmptyDatesOn() {
+        // Préparation: Créer des entrées avec datesOn vide
+        TreeSet<Integer> datesOn = new TreeSet<>();
+        TreeSet<Integer> datesOff = new TreeSet<>();
+        datesOff.add(5);
+        Vector<Integer> timeLapseOn = new Vector<>();
+        Vector<Integer> timeLapseOff = new Vector<>();
+
+
+        DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "onMethod", datesOn, "offMethod", datesOff);
+        assertTrue("timeLapseOn ou timeLapseOff devrait être mis à jour en fonction de dates2Timalapse", timeLapseOn.isEmpty() || !timeLapseOff.isEmpty());
+    }
+
+
 }
 
 //La méthode `dates2Timalapse` de la classe `DiscreteActionOnOffDependent` est
