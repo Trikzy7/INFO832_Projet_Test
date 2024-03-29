@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Method;
 import java.util.TreeSet;
 import java.util.Vector;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
+import static org.junit.jupiter.api.Assertions.*;
 public class DiscreteActionOnOffDependentTest {
 
     private DiscreteActionOnOffDependent discreteAction;
@@ -104,6 +102,25 @@ public class DiscreteActionOnOffDependentTest {
 
         DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "onMethod", datesOn, "offMethod", datesOff);
         assertTrue("timeLapseOn ou timeLapseOff devrait être mis à jour en fonction de dates2Timalapse", timeLapseOn.isEmpty() || !timeLapseOff.isEmpty());
+    }
+
+    /*it won't compile as we are using the wrong type
+
+        @Test(expected = CompileTimeError.class)
+        public void testSpendTimeWithInvalidType() {
+            DiscreteActionOnOffDependent action = actionDependent;
+
+                    // Attempt to call spendTime with a String, which should result in a compile-time error, not a test failure.
+                    action.spendTime("test");
+        }
+     */
+
+
+    @Test
+    public void testSpendTimeWithNegativeInput() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            discreteAction.spendTime(-5);
+        });
     }
 
 
