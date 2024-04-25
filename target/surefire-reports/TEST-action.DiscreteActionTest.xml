@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="action.DiscreteActionTest" time="0.001" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="action.DiscreteActionTest" time="0.001" tests="8" errors="0" skipped="0" failures="0">
   <properties/>
   <testcase name="compareTo" classname="action.DiscreteActionTest" time="0"/>
   <testcase name="spendTime" classname="action.DiscreteActionTest" time="0"/>
   <testcase name="testToString" classname="action.DiscreteActionTest" time="0"/>
   <testcase name="next" classname="action.DiscreteActionTest" time="0"/>
   <testcase name="getCurrentLapsTime" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="getMethod" classname="action.DiscreteActionTest" time="0"/>
+  <testcase name="getMethod" classname="action.DiscreteActionTest" time="0.001"/>
   <testcase name="getObject" classname="action.DiscreteActionTest" time="0"/>
   <testcase name="hasNext" classname="action.DiscreteActionTest" time="0"/>
 </testsuite>

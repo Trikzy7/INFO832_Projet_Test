@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
-        <sonar.projectKey>INFO832_theo</sonar.projectKey>
+        <sonar.projectKey>INFO832_theo_token2</sonar.projectKey>
         <sonar.login>sqp_d60e7eb5dabd336255a0b51b5d685172c91fdd6b</sonar.login>
 
     </properties>
