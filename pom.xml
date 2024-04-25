@@ -15,7 +15,7 @@
 
         <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
         <sonar.projectKey>INFO832_theo</sonar.projectKey>
-        <sonar.login>sqp_e363ec75af0e797ff6a064b4db45eaaa5deab55d</sonar.login>
+        <sonar.login>sqp_d60e7eb5dabd336255a0b51b5d685172c91fdd6b</sonar.login>
 
     </properties>
 
@@ -24,7 +24,7 @@
 
             <!-- Ajoutez le plugin SonarQube -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.7.0.1746</version>
             </plugin>
