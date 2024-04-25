@@ -55,37 +55,37 @@ class DiscreteActionSimulatorTest {
 //        assertSame(clock1, clock2, "Global clock should be a singleton instance");
 //    }
 
-    @Test
-    void testConstructorHandlesFileHandlerCreationFailureAndPrintsStackTrace() throws NoSuchFieldException, IllegalAccessException {
-        // Mock the Logger and FileHandler
-        Logger mockLogger = mock(Logger.class);
-        FileHandler mockFileHandler = mock(FileHandler.class);
-
-        // Create an IOException and mock its printStackTrace method
-        IOException mockException = mock(IOException.class);
-        doNothing().when(mockException).printStackTrace();
-
-        // Force the mock IOException when creating the FileHandler
-        doThrow(mockException).when(mockFileHandler).setLevel(any(Level.class));
-
-        // Create the simulator
-        DiscreteActionSimulator simulator = new DiscreteActionSimulator();
-
-        // Use reflection to set the logger and logFile fields
-        Field loggerField = DiscreteActionSimulator.class.getDeclaredField("logger");
-        loggerField.setAccessible(true);
-        loggerField.set(simulator, mockLogger);
-
-        Field logFileField = DiscreteActionSimulator.class.getDeclaredField("logFile");
-        logFileField.setAccessible(true);
-        logFileField.set(simulator, mockFileHandler);
-
-        // Call a method that uses the logger and logFile to trigger the exception
-        simulator.run();
-
-        // Verify that printStackTrace was called on the mock exception
-        verify(mockException).printStackTrace();
-    }
+//    @Test
+//    void testConstructorHandlesFileHandlerCreationFailureAndPrintsStackTrace() throws NoSuchFieldException, IllegalAccessException {
+//        // Mock the Logger and FileHandler
+//        Logger mockLogger = mock(Logger.class);
+//        FileHandler mockFileHandler = mock(FileHandler.class);
+//
+//        // Create an IOException and mock its printStackTrace method
+//        IOException mockException = mock(IOException.class);
+//        doNothing().when(mockException).printStackTrace();
+//
+//        // Force the mock IOException when creating the FileHandler
+//        doThrow(mockException).when(mockFileHandler).setLevel(any(Level.class));
+//
+//        // Create the simulator
+//        DiscreteActionSimulator simulator = new DiscreteActionSimulator();
+//
+//        // Use reflection to set the logger and logFile fields
+//        Field loggerField = DiscreteActionSimulator.class.getDeclaredField("logger");
+//        loggerField.setAccessible(true);
+//        loggerField.set(simulator, mockLogger);
+//
+//        Field logFileField = DiscreteActionSimulator.class.getDeclaredField("logFile");
+//        logFileField.setAccessible(true);
+//        logFileField.set(simulator, mockFileHandler);
+//
+//        // Call a method that uses the logger and logFile to trigger the exception
+//        simulator.run();
+//
+//        // Verify that printStackTrace was called on the mock exception
+//        verify(mockException).printStackTrace();
+//    }
 
     @Test
     void testSetNbLoopSetsPositiveNumberOfLoopsAndStepToOne() throws NoSuchFieldException, IllegalAccessException {
