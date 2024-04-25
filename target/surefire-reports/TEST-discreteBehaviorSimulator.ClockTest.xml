@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="discreteBehaviorSimulator.ClockTest" time="0.003" tests="10" errors="0" skipped="0" failures="4">
+  <properties/>
+  <testcase name="testAddNullObserver" classname="discreteBehaviorSimulator.ClockTest" time="0">
+    <failure message="Expected addObserver(null) to throw NullPointerException, but it didn&apos;t" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected addObserver(null) to throw NullPointerException, but it didn't
+	at discreteBehaviorSimulator.ClockTest.testAddNullObserver(ClockTest.java:106)
+</failure>
+  </testcase>
+  <testcase name="testSetNextJump" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testAddObserver" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testSetAndGetVirtual" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testSingleton" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testIncreaseWithNegativeValue" classname="discreteBehaviorSimulator.ClockTest" time="0.001"/>
+  <testcase name="testIncrease" classname="discreteBehaviorSimulator.ClockTest" time="0">
+    <failure message="Exception thrown during test: Unexpected time change" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Exception thrown during test: Unexpected time change
+	at discreteBehaviorSimulator.ClockTest.testIncrease(ClockTest.java:93)
+</failure>
+  </testcase>
+  <testcase name="testRemoveNullObserver" classname="discreteBehaviorSimulator.ClockTest" time="0">
+    <failure message="Expected removeObserver(null) to throw NullPointerException, but it didn&apos;t ==&gt; Expected java.lang.NullPointerException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected removeObserver(null) to throw NullPointerException, but it didn't ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+	at discreteBehaviorSimulator.ClockTest.testRemoveNullObserver(ClockTest.java:116)
+</failure>
+  </testcase>
+  <testcase name="testRemoveObserver" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testSetNextJumpWithNegativeValue" classname="discreteBehaviorSimulator.ClockTest" time="0">
+    <failure message="Expected setNextJump(-10) to throw an exception, but it didn&apos;t ==&gt; Expected java.lang.Exception to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected setNextJump(-10) to throw an exception, but it didn't ==> Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at discreteBehaviorSimulator.ClockTest.testSetNextJumpWithNegativeValue(ClockTest.java:140)
+</failure>
+  </testcase>
+</testsuite>
