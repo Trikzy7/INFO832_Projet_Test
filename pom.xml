@@ -41,7 +41,7 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <forkCount>0</forkCount>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
 
