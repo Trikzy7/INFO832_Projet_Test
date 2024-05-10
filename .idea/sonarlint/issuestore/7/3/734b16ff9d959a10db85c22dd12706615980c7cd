@@ -1,0 +1,21 @@
+
+Œ
+java:S1319P"jThe type of "datesOn" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8µ…¨Ûè1
+
+java:S1319P"kThe type of "datesOff" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8¸…¨Ûè1
+‡
+java:S11490"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8ë‡¨Ûè1
+‡
+java:S11490"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8î‡¨Ûè1
+‡
+java:S11491"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùÀÅÇıÿÿÿÿ8î‡¨Ûè1
+X	java:S125!"<This block of commented-out lines of code should be removed.(ı…ªì8‚ˆ¨Ûè1
+[
+java:S1155=">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8²ˆ¨Ûè1
+[
+java:S1155=">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8³ˆ¨Ûè1
+]	java:S125Q"<This block of commented-out lines of code should be removed.(¬Šüÿúÿÿÿÿ8àˆ¨Ûè1
+O
+java:S1068"3Remove this unused "currentLapsTime" private field.(ÜŠï8œ‰¨Ûè1
+V
+java:S11440"4Remove this unused private "dates2Timalapse" method.(ùŸûÿÿÿÿ8‰¨Ûè1
