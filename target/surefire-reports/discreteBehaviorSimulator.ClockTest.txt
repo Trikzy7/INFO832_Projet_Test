@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: discreteBehaviorSimulator.ClockTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in discreteBehaviorSimulator.ClockTest
+testAddNullObserver  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected addObserver(null) to throw NullPointerException, but it didn't
+	at discreteBehaviorSimulator.ClockTest.testAddNullObserver(ClockTest.java:106)
+
+testIncrease  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Exception thrown during test: Unexpected time change
+	at discreteBehaviorSimulator.ClockTest.testIncrease(ClockTest.java:93)
+
+testRemoveNullObserver  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected removeObserver(null) to throw NullPointerException, but it didn't ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+	at discreteBehaviorSimulator.ClockTest.testRemoveNullObserver(ClockTest.java:116)
+
+testSetNextJumpWithNegativeValue  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected setNextJump(-10) to throw an exception, but it didn't ==> Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at discreteBehaviorSimulator.ClockTest.testSetNextJumpWithNegativeValue(ClockTest.java:140)
+

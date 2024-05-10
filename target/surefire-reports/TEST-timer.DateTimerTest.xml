@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="timer.DateTimerTest" time="0.006" tests="6" errors="0" skipped="0" failures="0">
+  <properties/>
+  <testcase name="testNextIsFirstElement" classname="timer.DateTimerTest" time="0.002"/>
+  <testcase name="testConstructVectorNull" classname="timer.DateTimerTest" time="0.001"/>
+  <testcase name="testConstructTreesetNull" classname="timer.DateTimerTest" time="0"/>
+  <testcase name="testHasNextIsTrue" classname="timer.DateTimerTest" time="0"/>
+  <testcase name="testHasNextIsFalse" classname="timer.DateTimerTest" time="0"/>
+  <testcase name="testNextVectorEmpty" classname="timer.DateTimerTest" time="0"/>
+</testsuite>

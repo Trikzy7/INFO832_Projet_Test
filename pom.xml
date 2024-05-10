@@ -14,8 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
-        <sonar.projectKey>INFO832_theo</sonar.projectKey>
-        <sonar.login>sqp_e363ec75af0e797ff6a064b4db45eaaa5deab55d</sonar.login>
+        <sonar.projectKey>INFO832_theo_token2</sonar.projectKey>
+        <sonar.login>sqp_d60e7eb5dabd336255a0b51b5d685172c91fdd6b</sonar.login>
 
     </properties>
 
@@ -29,10 +29,21 @@
                 <version>3.7.0.1746</version>
             </plugin>
 
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>2.22.0</version>-->
+<!--            </plugin>-->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
+                <configuration>
+                    <forkCount>0</forkCount>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -65,6 +76,14 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     
 </project>

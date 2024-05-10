@@ -1,0 +1,9 @@
+
+`	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(»’êìùÿÿÿÿ
+[	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(»ü®Ì
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¨æÏç
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÊÝ—™ÿÿÿÿÿ
+¯
+java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(üî—ð
+V	java:S1257"<This block of commented-out lines of code should be removed.(“êøïûÿÿÿÿ

@@ -1,0 +1,9 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠØ­çÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÊÝ—™ÿÿÿÿÿ
+z
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(åûÒ¸ûÿÿÿÿ
+U
+java:S1161$":Add the "@Override" annotation above this method signature(´„áçúÿÿÿÿ
+P
+java:S1161*":Add the "@Override" annotation above this method signature(Îî©Ú

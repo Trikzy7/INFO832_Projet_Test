@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="timer.OneShotTimerTest" time="0.001" tests="3" errors="0" skipped="0" failures="1">
+  <properties/>
+  <testcase name="testHasNextFinished" classname="timer.OneShotTimerTest" time="0"/>
+  <testcase name="testNextExisted" classname="timer.OneShotTimerTest" time="0"/>
+  <testcase name="testHasNextNotFinished" classname="timer.OneShotTimerTest" time="0">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at timer.OneShotTimerTest.testHasNextNotFinished(OneShotTimerTest.java:13)
+]]></failure>
+  </testcase>
+</testsuite>
