@@ -33,6 +33,11 @@ public class Clock {
 	}
 	
 	public void addObserver(ClockObserver o) {
+
+		if (o == null){
+			//return nullPointerException
+			throw new NullPointerException("Observers set is null");
+		}
 		this.observers.add(o);
 	}
 	public void removeObserver(ClockObserver o) {
