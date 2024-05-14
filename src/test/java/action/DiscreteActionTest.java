@@ -1,22 +1,18 @@
 package action;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import timer.OneShotTimer;
+import timer.Timer;
+
+import java.lang.reflect.Method;
+import static org.junit.jupiter.api.Assertions.*;
+
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
-
-import org.junit.Before;
-import org.junit.Test;
-import timer.Timer;
-import java.lang.reflect.Method;
-
-import org.junit.jupiter.api.BeforeEach;
-import java.lang.reflect.Method;
-import java.util.TreeSet;
-import java.util.Vector;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class DiscreteActionTest {
 
@@ -26,7 +22,7 @@ public class DiscreteActionTest {
     private String methodName = "toString";
     private Integer initialLapsTime = 10; // Initial lapsTime to be set for testing
 
-    @Before
+    @BeforeEach
     public void setUp() throws NoSuchMethodException, SecurityException {
         // Initialize necessary objects
         testObject = new Object();
