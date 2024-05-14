@@ -77,24 +77,24 @@ class ClockTest {
         assertFalse(clock.isVirtual());
     }
 
-//    @Test
-//    void testSetNextJump() {
-//        clock.setNextJump(20);
-//        assertEquals(20, observer.getNextTime());
-//    }
-//
-//    @Test
-//    void testIncrease() {
-//        try {
-//            clock.setNextJump(5);
-//            clock.increase(15);
-//            assertEquals(15, observer.getTime());
-//        } catch (Exception e) {
-//            fail("Exception thrown during test: " + e.getMessage());
-//        }
-//    }
-//
-//
+    @Test
+    void testSetNextJump() {
+        clock.setNextJump(20);
+        assertEquals(20, observer.getNextTime());
+    }
+
+    @Test
+    void testIncrease() {
+        try {
+            clock.setNextJump(5);
+            clock.increase(15);
+            assertEquals(15, observer.getTime());
+        } catch (Exception e) {
+            fail("Exception thrown during test: " + e.getMessage());
+        }
+    }
+
+
 //    //    --------------------------------------------- TEST PAR NEGATION ---------------------------------------------
 //    @Test
 //    void testAddNullObserver() {
