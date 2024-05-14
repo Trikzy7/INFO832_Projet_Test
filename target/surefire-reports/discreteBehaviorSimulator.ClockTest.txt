@@ -10,7 +10,7 @@ testIncrease  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Exception thrown during test: Unexpected time change
 	at discreteBehaviorSimulator.ClockTest.testIncrease(ClockTest.java:93)
 
-testRemoveNullObserver  Time elapsed: 0.001 s  <<< FAILURE!
+testRemoveNullObserver  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected removeObserver(null) to throw NullPointerException, but it didn't ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
 	at discreteBehaviorSimulator.ClockTest.testRemoveNullObserver(ClockTest.java:116)
 
