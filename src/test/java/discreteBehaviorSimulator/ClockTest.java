@@ -102,40 +102,40 @@ class ClockTest {
             clock.removeObserver(null);
         }, "Expected addObserver(null) to throw NullPointerException, but it didn't");
     }
-//
-//    @Test
-//    void testRemoveNullObserver() {
-//        // Try to remove a null observer
-//        NullPointerException thrown = assertThrows(
-//                NullPointerException.class,
-//                () -> clock.removeObserver(null),
-//                "Expected removeObserver(null) to throw NullPointerException, but it didn't"
-//        );
-//
-//        assertEquals("Expected removeObserver(null) to throw NullPointerException, but it didn't", thrown.getMessage());
-//    }
-//
-//    //    --------------------------------------------- TEST AUX LIMITES ---------------------------------------------
-//    @Test
-//    void testIncreaseWithNegativeValue() {
-//        clock.setNextJump(5);
-//        Exception thrown = assertThrows(
-//                Exception.class,
-//                () -> clock.increase(-50),
-//                "Expected increase(-50) to throw an exception, but it didn't"
-//        );
-//
-//        assertEquals("Unexpected time change", thrown.getMessage());
-//    }
-//
-//    @Test
-//    void testSetNextJumpWithNegativeValue() {
-//        Exception thrown = assertThrows(
-//                Exception.class,
-//                () -> clock.setNextJump(-10),
-//                "Expected setNextJump(-10) to throw an exception, but it didn't"
-//        );
-//
-//        assertEquals("Unexpected time change", thrown.getMessage());
-//    }
+
+    @Test
+    void testRemoveNullObserver() {
+        // Try to remove a null observer
+        NullPointerException thrown = assertThrows(
+                NullPointerException.class,
+                () -> clock.removeObserver(null),
+                "Expected removeObserver(null) to throw NullPointerException, but it didn't"
+        );
+
+        assertEquals("Expected removeObserver(null) to throw NullPointerException, but it didn't", thrown.getMessage());
+    }
+
+    //    --------------------------------------------- TEST AUX LIMITES ---------------------------------------------
+    @Test
+    void testIncreaseWithNegativeValue() {
+        clock.setNextJump(5);
+        Exception thrown = assertThrows(
+                Exception.class,
+                () -> clock.increase(-50),
+                "Expected increase(-50) to throw an exception, but it didn't"
+        );
+
+        assertEquals("Unexpected time change", thrown.getMessage());
+    }
+
+    @Test
+    void testSetNextJumpWithNegativeValue() {
+        Exception thrown = assertThrows(
+                Exception.class,
+                () -> clock.setNextJump(-10),
+                "Expected setNextJump(-10) to throw an exception, but it didn't"
+        );
+
+        assertEquals("Unexpected time change", thrown.getMessage());
+    }
 }
