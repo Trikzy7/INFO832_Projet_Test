@@ -20,7 +20,7 @@ t	java:S120"ZRename this package name to match the regular expression '^[a-z_
 {
 java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(†¾Œš
 {
-java:S1149ã"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ìí¡³ùÿÿÿÿ
+java:S1149æ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ìí¡³ùÿÿÿÿ
 V	java:S125*"<This block of commented-out lines of code should be removed.(¼ô¾“øÿÿÿÿ
 V	java:S125/"<This block of commented-out lines of code should be removed.(§‚³ûÿÿÿÿ
 V	java:S125W"<This block of commented-out lines of code should be removed.(’»“‰ýÿÿÿÿ

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="action.DiscreteActionTest" time="0.001" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="action.DiscreteActionTest" time="0.037" tests="5" errors="1" skipped="0" failures="2">
   <properties/>
-  <testcase name="compareTo" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="spendTime" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="testToString" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="next" classname="action.DiscreteActionTest" time="0.001"/>
-  <testcase name="getCurrentLapsTime" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="getMethod" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="getObject" classname="action.DiscreteActionTest" time="0"/>
-  <testcase name="hasNext" classname="action.DiscreteActionTest" time="0"/>
+  <testcase name="testDiscreteActionConstructor" classname="action.DiscreteActionTest" time="0.003"/>
+  <testcase name="testCompareToWithNullCurrentLapsTime" classname="action.DiscreteActionTest" time="0.016"/>
+  <testcase name="testSpendTime" classname="action.DiscreteActionTest" time="0.003">
+    <failure message="LapsTime should not be null after spendTime" type="java.lang.AssertionError">java.lang.AssertionError: LapsTime should not be null after spendTime
+	at action.DiscreteActionTest.testSpendTime(DiscreteActionTest.java:64)
+</failure>
+  </testcase>
+  <testcase name="testNextMethodUpdatesLapsTime" classname="action.DiscreteActionTest" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at action.DiscreteActionTest.testNextMethodUpdatesLapsTime(DiscreteActionTest.java:79)
+</error>
+  </testcase>
+  <testcase name="testCompareToWithBothLapsTimeNull" classname="action.DiscreteActionTest" time="0.003">
+    <failure message="Deux actions avec lapsTime à null devraient être considérées comme égales (0) expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Deux actions avec lapsTime à null devraient être considérées comme égales (0) expected:<0> but was:<1>
+	at action.DiscreteActionTest.testCompareToWithBothLapsTimeNull(DiscreteActionTest.java:108)
+]]></failure>
+  </testcase>
 </testsuite>

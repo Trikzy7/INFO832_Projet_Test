@@ -224,6 +224,9 @@ public class DiscreteActionSimulator implements Runnable {
 	}
 	
 	public String toString(){
+		if (this.actionsList.isEmpty()){
+			return "No actions";
+		}
 		StringBuffer toS = new StringBuffer("------------------\nTestAuto :" + this.actionsList.size());
 		for(DiscreteActionInterface c : this.actionsList){
 			toS.append(c.toString() + "\n");
