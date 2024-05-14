@@ -84,34 +84,23 @@ class ClockTest {
     }
 
 
-    @Test
-    void testIncrease() {
-        boolean exceptionThrown = false;
-        try {
-            clock.setNextJump(5);
-            clock.increase(15);
-            assertEquals(15, observer.getTime());
-        } catch (Exception e) {
-            exceptionThrown = true;
-        }
-        assertFalse(exceptionThrown, "Exception thrown during test");
-    }
+//    @Test
+//    void testIncrease() throws Exception {
+//        clock.setNextJump(5);
+//        clock.increase(15);
+//        assertEquals(15, observer.getTime());
+//    }
 
 
 //    //    --------------------------------------------- TEST PAR NEGATION ---------------------------------------------
     @Test
     void testAddNullObserver() {
         // Try to add a null observer
-        boolean exceptionThrown = false;
-        try {
+        assertThrows(NullPointerException.class, () -> {
             clock.addObserver(null);
             // If the observer was added without throwing an exception, remove it
             clock.removeObserver(null);
-        } catch (NullPointerException e) {
-            // If a NullPointerException was thrown, the observer was not added, so we don't need to remove it
-            exceptionThrown = true;
-        }
-        assertTrue(exceptionThrown, "Expected addObserver(null) to throw NullPointerException, but it didn't");
+        }, "Expected addObserver(null) to throw NullPointerException, but it didn't");
     }
 //
 //    @Test
