@@ -128,14 +128,14 @@ class ClockTest {
         assertEquals("Unexpected time change", thrown.getMessage());
     }
 
-//    @Test
-//    void testSetNextJumpWithNegativeValue() {
-//        Exception thrown = assertThrows(
-//                Exception.class,
-//                () -> clock.setNextJump(-10),
-//                "Expected setNextJump(-10) to throw an exception, but it didn't"
-//        );
-//
-//        assertEquals("Unexpected time change", thrown.getMessage());
-//    }
+    @Test
+    void testSetNextJumpWithNegativeValue() {
+        Exception thrown = assertThrows(
+                Exception.class,
+                () -> clock.setNextJump(-10),
+                "Expected setNextJump(-10) to throw an exception, but it didn't"
+        );
+
+        assertEquals("Unexpected time change", thrown.getMessage());
+    }
 }
