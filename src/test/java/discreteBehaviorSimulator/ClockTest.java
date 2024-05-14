@@ -8,28 +8,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ClockTest {
 
-    class TestClockObserver implements ClockObserver {
-        private int time;
-        private int nextTime;
-
-        @Override
-        public void clockChange(int time) {
-            this.time = time;
-        }
-
-        @Override
-        public void nextClockChange(int nextTime) {
-            this.nextTime = nextTime;
-        }
-
-        public int getTime() {
-            return time;
-        }
-
-        public int getNextTime() {
-            return nextTime;
-        }
-    }
+//    class TestClockObserver implements ClockObserver {
+//        private int time;
+//        private int nextTime;
+//
+//        @Override
+//        public void clockChange(int time) {
+//            this.time = time;
+//        }
+//
+//        @Override
+//        public void nextClockChange(int nextTime) {
+//            this.nextTime = nextTime;
+//        }
+//
+//        public int getTime() {
+//            return time;
+//        }
+//
+//        public int getNextTime() {
+//            return nextTime;
+//        }
+//    }
 
     private Clock clock;
     private TestClockObserver observer;
