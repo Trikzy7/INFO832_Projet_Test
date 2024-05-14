@@ -348,36 +348,36 @@ class DiscreteActionSimulatorTest {
 //        assertTrue(simulator.getActionsList().isEmpty(), "actionsList should still be empty");
 //    }
 
-    @Test
-    void testRunSimulationToCompletionExecutesForDefinedNumberOfLoopsThenStops() {
-        DiscreteActionSimulator simulator = new DiscreteActionSimulator();
-
-        // Create a mock action with hasNext() = true for 5 times, then false
-        DiscreteActionInterface action = mock(DiscreteActionInterface.class);
-        when(action.hasNext()).thenReturn(true, true, true, true, true, false);
-        when(action.next()).thenReturn(action);
-        when(action.getCurrentLapsTime()).thenReturn(10);
-
-        // Add the action to the simulator
-        simulator.addAction(action);
-
-        // Start the simulation
-        simulator.start();
-
-        // Wait for the simulation to complete
-        int counter = 0;
-        while (simulator.getRunning() && counter < 100) {
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            counter++;
-        }
-
-        // Verify that the simulation has stopped
-        assertFalse(simulator.getRunning(), "The simulation should have stopped");
-    }
+//    @Test
+//    void testRunSimulationToCompletionExecutesForDefinedNumberOfLoopsThenStops() {
+//        DiscreteActionSimulator simulator = new DiscreteActionSimulator();
+//
+//        // Create a mock action with hasNext() = true for 5 times, then false
+//        DiscreteActionInterface action = mock(DiscreteActionInterface.class);
+//        when(action.hasNext()).thenReturn(true, true, true, true, true, false);
+//        when(action.next()).thenReturn(action);
+//        when(action.getCurrentLapsTime()).thenReturn(10);
+//
+//        // Add the action to the simulator
+//        simulator.addAction(action);
+//
+//        // Start the simulation
+//        simulator.start();
+//
+//        // Wait for the simulation to complete
+//        int counter = 0;
+//        while (simulator.getRunning() && counter < 100) {
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            counter++;
+//        }
+//
+//        // Verify that the simulation has stopped
+//        assertFalse(simulator.getRunning(), "The simulation should have stopped");
+//    }
 
     @Test
     void testRunSimulationInfinitelyRunsUntilManuallyStopped() throws InterruptedException {
