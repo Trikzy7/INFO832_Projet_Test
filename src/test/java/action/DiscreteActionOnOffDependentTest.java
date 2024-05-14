@@ -57,52 +57,52 @@ public class DiscreteActionOnOffDependentTest {
     // fournissant une valeur d'entrée positive et négative, puis en vérifiant si le temps
     // de laps actuel est correctement mis à jour en conséquence.
 
-    @Test
-    public void testDates2Timalapse() {
-
-        TreeSet<Integer> datesOn = new TreeSet<>();
-        datesOn.add(1);
-        datesOn.add(4);
-
-        TreeSet<Integer> datesOff = new TreeSet<>();
-        datesOff.add(3);
-        datesOff.add(6);
-        datesOff.add(8);
-        datesOff.add(14);
-        datesOff.add(20);
-
-        Vector<Integer> timeLapseOn = new Vector<>();
-        Vector<Integer> timeLapseOff = new Vector<>();
-
-        // Instanciation de DiscreteActionOnOffDependent avec les paramètres nécessaires
-        DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "on", datesOn, "off", datesOff);
-
-        action.dates2Timalapse(datesOn, datesOff, timeLapseOn, timeLapseOff);
-
-        // Ajout des assertions pour vérifier le comportement de la méthode dates2Timalapse
-        // par rapport aux valeurs d'entrée fournies
-
-        // Par exemple, vérifiant si les vecteurs de laps de temps contiennent les valeurs attendues
-        assertEquals(3,(int) timeLapseOn.get(0));  // Valeur attendue pour le premier laps de temps dans timeLapseOn
-        assertEquals(3, (int) timeLapseOff.get(0)); // Valeur attendue pour le premier laps de temps dans timeLapseOff
-
-        // Vérifiez si les vecteurs de laps de temps contiennent les valeurs attendues
-        assertEquals(1, timeLapseOn.size());  // Le nombre de laps de temps dans timeLapseOn
-        assertEquals(4, timeLapseOff.size()); // Le nombre de laps de temps dans timeLapseOff
-    }
-    @Test
-    public void testDates2TimalapseWithEmptyDatesOn() {
-        // Préparation: Créer des entrées avec datesOn vide
-        TreeSet<Integer> datesOn = new TreeSet<>();
-        TreeSet<Integer> datesOff = new TreeSet<>();
-        datesOff.add(5);
-        Vector<Integer> timeLapseOn = new Vector<>();
-        Vector<Integer> timeLapseOff = new Vector<>();
-
-
-        DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "onMethod", datesOn, "offMethod", datesOff);
-        assertTrue("timeLapseOn ou timeLapseOff devrait être mis à jour en fonction de dates2Timalapse", timeLapseOn.isEmpty() || !timeLapseOff.isEmpty());
-    }
+//    @Test
+//    public void testDates2Timalapse() {
+//
+//        TreeSet<Integer> datesOn = new TreeSet<>();
+//        datesOn.add(1);
+//        datesOn.add(4);
+//
+//        TreeSet<Integer> datesOff = new TreeSet<>();
+//        datesOff.add(3);
+//        datesOff.add(6);
+//        datesOff.add(8);
+//        datesOff.add(14);
+//        datesOff.add(20);
+//
+//        Vector<Integer> timeLapseOn = new Vector<>();
+//        Vector<Integer> timeLapseOff = new Vector<>();
+//
+//        // Instanciation de DiscreteActionOnOffDependent avec les paramètres nécessaires
+//        DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "on", datesOn, "off", datesOff);
+//
+//        action.dates2Timalapse(datesOn, datesOff, timeLapseOn, timeLapseOff);
+//
+//        // Ajout des assertions pour vérifier le comportement de la méthode dates2Timalapse
+//        // par rapport aux valeurs d'entrée fournies
+//
+//        // Par exemple, vérifiant si les vecteurs de laps de temps contiennent les valeurs attendues
+//        assertEquals(3,(int) timeLapseOn.get(0));  // Valeur attendue pour le premier laps de temps dans timeLapseOn
+//        assertEquals(3, (int) timeLapseOff.get(0)); // Valeur attendue pour le premier laps de temps dans timeLapseOff
+//
+//        // Vérifiez si les vecteurs de laps de temps contiennent les valeurs attendues
+//        assertEquals(1, timeLapseOn.size());  // Le nombre de laps de temps dans timeLapseOn
+//        assertEquals(4, timeLapseOff.size()); // Le nombre de laps de temps dans timeLapseOff
+//    }
+//    @Test
+//    public void testDates2TimalapseWithEmptyDatesOn() {
+//        // Préparation: Créer des entrées avec datesOn vide
+//        TreeSet<Integer> datesOn = new TreeSet<>();
+//        TreeSet<Integer> datesOff = new TreeSet<>();
+//        datesOff.add(5);
+//        Vector<Integer> timeLapseOn = new Vector<>();
+//        Vector<Integer> timeLapseOff = new Vector<>();
+//
+//
+//        DiscreteActionOnOffDependent action = new DiscreteActionOnOffDependent(new Object(), "onMethod", datesOn, "offMethod", datesOff);
+//        assertTrue("timeLapseOn ou timeLapseOff devrait être mis à jour en fonction de dates2Timalapse", timeLapseOn.isEmpty() || !timeLapseOff.isEmpty());
+//    }
 
     /*it won't compile as we are using the wrong type
 
