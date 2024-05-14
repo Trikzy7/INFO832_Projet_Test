@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="11.779" tests="11" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="11.731" tests="11" errors="0" skipped="0" failures="2">
   <properties/>
-  <testcase name="testToStringWithActionsReturnsStringContainingActionsState" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.16"/>
-  <testcase name="setNbLoopSetsNegativeNumberOfLoopsAndStepToMinusOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001"/>
-  <testcase name="testToStringWithEmptyActionsListReturnsStringIndicatingNoActions" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0">
+  <testcase name="testToStringWithActionsReturnsStringContainingActionsState" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.156"/>
+  <testcase name="setNbLoopSetsNegativeNumberOfLoopsAndStepToMinusOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0"/>
+  <testcase name="testToStringWithEmptyActionsListReturnsStringIndicatingNoActions" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001">
     <failure message="The string should indicate there are no actions ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: The string should indicate there are no actions ==> expected: <true> but was: <false>
 	at discreteBehaviorSimulator.DiscreteActionSimulatorTest.testToStringWithEmptyActionsListReturnsStringIndicatingNoActions(DiscreteActionSimulatorTest.java:493)
 ]]></failure>
@@ -11,20 +11,20 @@
   <testcase name="testRunSimulationInfinitelyRunsUntilManuallyStopped" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="1.011"/>
   <testcase name="testSetNbLoopSetsZeroNumberOfLoopsAndStepToMinusOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001"/>
   <testcase name="testStartSimulationSetsRunningToTrue" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001"/>
-  <testcase name="testSetNbLoopSetsPositiveNumberOfLoopsAndStepToOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.002"/>
-  <testcase name="testSetMinimumIntegerValueForLoopsSetsNbLoopToZeroAndStepToMinusOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.002"/>
-  <testcase name="testRunSimulationToCompletionExecutesForDefinedNumberOfLoopsThenStops" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="10.384">
+  <testcase name="testSetNbLoopSetsPositiveNumberOfLoopsAndStepToOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001"/>
+  <testcase name="testSetMinimumIntegerValueForLoopsSetsNbLoopToZeroAndStepToMinusOne" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.001"/>
+  <testcase name="testRunSimulationToCompletionExecutesForDefinedNumberOfLoopsThenStops" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="10.337">
     <failure message="The simulation should have stopped ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: The simulation should have stopped ==> expected: <false> but was: <true>
 	at discreteBehaviorSimulator.DiscreteActionSimulatorTest.testRunSimulationToCompletionExecutesForDefinedNumberOfLoopsThenStops(DiscreteActionSimulatorTest.java:379)
 ]]></failure>
     <system-out><![CDATA[LANCEMENT DU THREAD Discrete Action Simulator 
 
 ------------------
-TestAuto :1Mock for DiscreteActionInterface, hashCode: 1409625423
+TestAuto :1Mock for DiscreteActionInterface, hashCode: 626469594
 ---------------------
 
 ]]></system-out>
   </testcase>
-  <testcase name="testRunSimulationWithEmptyActionsListExecutesNoActionsAndStops" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.105"/>
-  <testcase name="testStopSimulationSetsRunningToFalse" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.108"/>
+  <testcase name="testRunSimulationWithEmptyActionsListExecutesNoActionsAndStops" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.108"/>
+  <testcase name="testStopSimulationSetsRunningToFalse" classname="discreteBehaviorSimulator.DiscreteActionSimulatorTest" time="0.109"/>
 </testsuite>

@@ -10,13 +10,13 @@
   <testcase name="testAddObserver" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
   <testcase name="testSetAndGetVirtual" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
   <testcase name="testSingleton" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
-  <testcase name="testIncreaseWithNegativeValue" classname="discreteBehaviorSimulator.ClockTest" time="0"/>
+  <testcase name="testIncreaseWithNegativeValue" classname="discreteBehaviorSimulator.ClockTest" time="0.001"/>
   <testcase name="testIncrease" classname="discreteBehaviorSimulator.ClockTest" time="0">
     <failure message="Exception thrown during test: Unexpected time change" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Exception thrown during test: Unexpected time change
 	at discreteBehaviorSimulator.ClockTest.testIncrease(ClockTest.java:93)
 </failure>
   </testcase>
-  <testcase name="testRemoveNullObserver" classname="discreteBehaviorSimulator.ClockTest" time="0.001">
+  <testcase name="testRemoveNullObserver" classname="discreteBehaviorSimulator.ClockTest" time="0">
     <failure message="Expected removeObserver(null) to throw NullPointerException, but it didn&apos;t ==&gt; Expected java.lang.NullPointerException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected removeObserver(null) to throw NullPointerException, but it didn't ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
 	at discreteBehaviorSimulator.ClockTest.testRemoveNullObserver(ClockTest.java:116)
 </failure>
