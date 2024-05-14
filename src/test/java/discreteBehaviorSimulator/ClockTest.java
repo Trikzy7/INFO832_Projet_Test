@@ -69,14 +69,14 @@ class ClockTest {
         assertNotEquals(20, observer.getNextTime(), "Observer got updated after being removed");
     }
 
-//    @Test
-//    void testSetAndGetVirtual() {
-//        clock.setVirtual(true);
-//        assertTrue(clock.isVirtual());
-//        clock.setVirtual(false);
-//        assertFalse(clock.isVirtual());
-//    }
-//
+    @Test
+    void testSetAndGetVirtual() {
+        clock.setVirtual(true);
+        assertTrue(clock.isVirtual());
+        clock.setVirtual(false);
+        assertFalse(clock.isVirtual());
+    }
+
 //    @Test
 //    void testSetNextJump() {
 //        clock.setNextJump(20);
