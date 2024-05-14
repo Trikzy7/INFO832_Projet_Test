@@ -15,7 +15,7 @@
 
         <sonar.host.url>http://gpu-epu.univ-savoie.fr:9000</sonar.host.url>
         <sonar.projectKey>INFO832_Projet_theo</sonar.projectKey>
-        <sonar.token>sqp_abc2687d7db6df8b5f75fef6cbfb2d41ad7de295</sonar.token>
+        <sonar.login>sqp_abc2687d7db6df8b5f75fef6cbfb2d41ad7de295</sonar.login>
 
     </properties>
 
