@@ -41,6 +41,10 @@ public class Clock {
 		this.observers.add(o);
 	}
 	public void removeObserver(ClockObserver o) {
+		if (o == null){
+			//return nullPointerException
+			throw new NullPointerException("Expected removeObserver(null) to throw NullPointerException, but it didn't");
+		}
 		this.observers.remove(o);
 	}
 	
