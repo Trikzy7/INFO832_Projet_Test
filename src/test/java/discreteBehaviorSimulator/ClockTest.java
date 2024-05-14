@@ -62,13 +62,13 @@ class ClockTest {
     }
 
 
-//    @Test
-//    void testRemoveObserver() {
-//        clock.removeObserver(observer);
-//        clock.setNextJump(20);
-//        assertNotEquals(20, observer.getNextTime(), "Observer got updated after being removed");
-//    }
-//
+    @Test
+    void testRemoveObserver() {
+        clock.removeObserver(observer);
+        clock.setNextJump(20);
+        assertNotEquals(20, observer.getNextTime(), "Observer got updated after being removed");
+    }
+
 //    @Test
 //    void testSetAndGetVirtual() {
 //        clock.setVirtual(true);
