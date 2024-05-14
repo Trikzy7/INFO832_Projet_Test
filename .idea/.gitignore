@@ -6,5 +6,28 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+<<<<<<< HEAD
 # GitHub Copilot persisted chat sessions
 /copilot/chatSessions
+=======
+/sonarlint/issuestore/2/0/20ed66d4e2437c8092474d42fac6b6aab6a5f6c1
+/sonarlint/securityhotspotstore/2/0/20ed66d4e2437c8092474d42fac6b6aab6a5f6c1
+/sonarlint/issuestore/7/3/734b16ff9d959a10db85c22dd12706615980c7cd
+/sonarlint/securityhotspotstore/7/3/734b16ff9d959a10db85c22dd12706615980c7cd
+/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+/sonarlint/issuestore/6/7/673593a7ac679f8442b0ce593f83480ad7cacf66
+/sonarlint/securityhotspotstore/6/7/673593a7ac679f8442b0ce593f83480ad7cacf66
+/sonarlint/issuestore/a/0/a0a18e3260fac1b72007885642f53f7a3e7bf58f
+/sonarlint/securityhotspotstore/a/0/a0a18e3260fac1b72007885642f53f7a3e7bf58f
+/sonarlint/issuestore/b/e/be0864ea93eb462c624962d46790ae41105a49e0
+/sonarlint/securityhotspotstore/b/e/be0864ea93eb462c624962d46790ae41105a49e0
+/sonarlint/issuestore/e/5/e5e91eccb0edf4ec24b8759cfa90abeb535e6958
+/sonarlint/securityhotspotstore/e/5/e5e91eccb0edf4ec24b8759cfa90abeb535e6958
+/sonarlint/issuestore/f/8/f8ded619607558cb6cb7c603b50d4c0294b90afb
+/sonarlint/securityhotspotstore/f/8/f8ded619607558cb6cb7c603b50d4c0294b90afb
+/sonarlint/issuestore/f/b/fbd427aae25701e8fcb1ffbdb7ebc56414c5dadd
+/sonarlint/securityhotspotstore/f/b/fbd427aae25701e8fcb1ffbdb7ebc56414c5dadd
+/sonarlint/issuestore/index.pb
+/sonarlint/securityhotspotstore/index.pb
+>>>>>>> remotes/origin/ActionTest
