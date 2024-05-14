@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: action.DiscreteActionOnOffDependentTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.086 s <<< FAILURE! - in action.DiscreteActionOnOffDependentTest
+testSpendTimeWithNegativeInput  Time elapsed: 0.066 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at action.DiscreteActionOnOffDependentTest.testSpendTimeWithNegativeInput(DiscreteActionOnOffDependentTest.java:121)
+
+testSpendTime  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "action.DiscreteActionOnOffDependent.getCurrentLapsTime()" is null
+	at action.DiscreteActionOnOffDependentTest.testSpendTime(DiscreteActionOnOffDependentTest.java:52)
+
+testNextMethodChange  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not equal but was: <null>
+	at action.DiscreteActionOnOffDependentTest.testNextMethodChange(DiscreteActionOnOffDependentTest.java:39)
+

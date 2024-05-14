@@ -12,6 +12,12 @@ import org.junit.Test;
 import timer.Timer;
 import java.lang.reflect.Method;
 
+import org.junit.jupiter.api.BeforeEach;
+import java.lang.reflect.Method;
+import java.util.TreeSet;
+import java.util.Vector;
+import static org.junit.jupiter.api.Assertions.*;
+
 public class DiscreteActionTest {
 
     private DiscreteAction action;

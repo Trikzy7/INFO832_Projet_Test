@@ -1,5 +1,7 @@
 timer/OneShotTimerTest.class
 discreteBehaviorSimulator/DiscreteActionSimulatorTest.class
+action/DiscreteActionOnOffDependentTest.class
+action/DiscreteActionDependentTest.class
 timer/TimeBoundedTimerTest.class
 timer/DateTimerTest.class
 discreteBehaviorSimulator/LogFormatterTest.class

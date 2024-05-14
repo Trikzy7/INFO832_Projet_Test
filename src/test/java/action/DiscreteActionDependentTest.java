@@ -10,6 +10,12 @@ import static org.junit.Assert.assertNotEquals;
 import java.lang.reflect.Method;
 import static org.junit.Assert.assertNotSame;
 
+import org.junit.jupiter.api.BeforeEach;
+import java.lang.reflect.Method;
+import java.util.TreeSet;
+import java.util.Vector;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 
 public class DiscreteActionDependentTest {

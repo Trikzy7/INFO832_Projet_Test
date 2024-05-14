@@ -6,7 +6,7 @@
 	at timer.TimeBoundedTimerTest.testHasNextFinished(TimeBoundedTimerTest.java:35)
 ]]></failure>
   </testcase>
-  <testcase name="testNextFinished" classname="timer.TimeBoundedTimerTest" time="0"/>
+  <testcase name="testNextFinished" classname="timer.TimeBoundedTimerTest" time="0.001"/>
   <testcase name="testNextNotFinished" classname="timer.TimeBoundedTimerTest" time="0"/>
-  <testcase name="testHasNextNotFinished" classname="timer.TimeBoundedTimerTest" time="0.001"/>
+  <testcase name="testHasNextNotFinished" classname="timer.TimeBoundedTimerTest" time="0"/>
 </testsuite>

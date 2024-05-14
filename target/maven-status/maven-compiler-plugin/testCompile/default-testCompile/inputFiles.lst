@@ -1,6 +1,8 @@
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/timer/MergedTimerTest.java
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/timer/RandomTimerTest.java
+/Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/action/DiscreteActionDependentTest.java
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/discreteBehaviorSimulator/LogFormatterTest.java
+/Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/action/DiscreteActionOnOffDependentTest.java
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/timer/OneShotTimerTest.java
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/timer/PeriodicTimerTest.java
 /Users/theo/Polytech/FI4/S8/INFO832/TEST/Projet/src/test/java/action/DiscreteActionTest.java
