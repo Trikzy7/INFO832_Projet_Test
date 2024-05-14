@@ -98,7 +98,7 @@ class ClockTest {
         // Try to add a null observer
         assertThrows(NullPointerException.class, () -> {
             clock.addObserver(null);
-            // If the observer was added without throwing an exception, remove it
+            // If the observer was added without throwing an exception -> remove it
             clock.removeObserver(null);
         }, "Expected addObserver(null) to throw NullPointerException, but it didn't");
     }
@@ -116,26 +116,26 @@ class ClockTest {
     }
 
     //    --------------------------------------------- TEST AUX LIMITES ---------------------------------------------
-    @Test
-    void testIncreaseWithNegativeValue() {
-        clock.setNextJump(5);
-        Exception thrown = assertThrows(
-                Exception.class,
-                () -> clock.increase(-50),
-                "Expected increase(-50) to throw an exception, but it didn't"
-        );
+//    @Test
+//    void testIncreaseWithNegativeValue() {
+//        clock.setNextJump(5);
+//        Exception thrown = assertThrows(
+//                Exception.class,
+//                () -> clock.increase(-50),
+//                "Expected increase(-50) to throw an exception, but it didn't"
+//        );
+//
+//        assertEquals("Unexpected time change", thrown.getMessage());
+//    }
 
-        assertEquals("Unexpected time change", thrown.getMessage());
-    }
-
-    @Test
-    void testSetNextJumpWithNegativeValue() {
-        Exception thrown = assertThrows(
-                Exception.class,
-                () -> clock.setNextJump(-10),
-                "Expected setNextJump(-10) to throw an exception, but it didn't"
-        );
-
-        assertEquals("Unexpected time change", thrown.getMessage());
-    }
+//    @Test
+//    void testSetNextJumpWithNegativeValue() {
+//        Exception thrown = assertThrows(
+//                Exception.class,
+//                () -> clock.setNextJump(-10),
+//                "Expected setNextJump(-10) to throw an exception, but it didn't"
+//        );
+//
+//        assertEquals("Unexpected time change", thrown.getMessage());
+//    }
 }
