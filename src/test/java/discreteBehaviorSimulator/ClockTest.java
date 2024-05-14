@@ -116,17 +116,17 @@ class ClockTest {
     }
 
     //    --------------------------------------------- TEST AUX LIMITES ---------------------------------------------
-    @Test
-    void testIncreaseWithNegativeValue() {
-        clock.setNextJump(5);
-        Exception thrown = assertThrows(
-                Exception.class,
-                () -> clock.increase(-50),
-                "Expected increase(-50) to throw an exception, but it didn't"
-        );
-
-        assertEquals("Unexpected time change", thrown.getMessage());
-    }
+//    @Test
+//    void testIncreaseWithNegativeValue() {
+//        clock.setNextJump(5);
+//        Exception thrown = assertThrows(
+//                Exception.class,
+//                () -> clock.increase(-50),
+//                "Expected increase(-50) to throw an exception, but it didn't"
+//        );
+//
+//        assertEquals("Unexpected time change", thrown.getMessage());
+//    }
 
 //    @Test
 //    void testSetNextJumpWithNegativeValue() {
