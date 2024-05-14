@@ -55,13 +55,13 @@ class ClockTest {
         assertSame(clock, anotherClock);
     }
 
-//    @Test
-//    void testAddObserver() {
-//        clock.setNextJump(10);
-//        assertEquals(10, observer.getNextTime(), "Observer did not get updated after being added");
-//    }
-//
-//
+    @Test
+    void testAddObserver() {
+        clock.setNextJump(10);
+        assertEquals(10, observer.getNextTime(), "Observer did not get updated after being added");
+    }
+
+
 //    @Test
 //    void testRemoveObserver() {
 //        clock.removeObserver(observer);
