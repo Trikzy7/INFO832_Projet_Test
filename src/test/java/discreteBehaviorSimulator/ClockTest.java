@@ -83,32 +83,36 @@ class ClockTest {
         assertEquals(20, observer.getNextTime());
     }
 
+
     @Test
     void testIncrease() {
+        boolean exceptionThrown = false;
         try {
             clock.setNextJump(5);
             clock.increase(15);
             assertEquals(15, observer.getTime());
         } catch (Exception e) {
-            fail("Exception thrown during test: " + e.getMessage());
+            exceptionThrown = true;
         }
+        assertFalse(exceptionThrown, "Exception thrown during test");
     }
 
 
 //    //    --------------------------------------------- TEST PAR NEGATION ---------------------------------------------
-//    @Test
-//    void testAddNullObserver() {
-//        // Try to add a null observer
-//        try {
-//            clock.addObserver(null);
-//            // If the observer was added without throwing an exception, remove it
-//            clock.removeObserver(null);
-//            fail("Expected addObserver(null) to throw NullPointerException, but it didn't");
-//        } catch (NullPointerException e) {
-//            // If a NullPointerException was thrown, the observer was not added, so we don't need to remove it
-//            assertEquals("Expected addObserver(null) to throw NullPointerException, but it didn't", e.getMessage());
-//        }
-//    }
+    @Test
+    void testAddNullObserver() {
+        // Try to add a null observer
+        boolean exceptionThrown = false;
+        try {
+            clock.addObserver(null);
+            // If the observer was added without throwing an exception, remove it
+            clock.removeObserver(null);
+        } catch (NullPointerException e) {
+            // If a NullPointerException was thrown, the observer was not added, so we don't need to remove it
+            exceptionThrown = true;
+        }
+        assertTrue(exceptionThrown, "Expected addObserver(null) to throw NullPointerException, but it didn't");
+    }
 //
 //    @Test
 //    void testRemoveNullObserver() {
