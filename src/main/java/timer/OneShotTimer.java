@@ -22,9 +22,4 @@ public class OneShotTimer implements Timer {
 		}
 		return null; // If hasNext is false, return null
 	}
-
-	// Adding a method to explicitly consume the timer
-	public void consume() {
-		this.hasNext = false; // Once consume is called, hasNext will return false
-	}
 }
