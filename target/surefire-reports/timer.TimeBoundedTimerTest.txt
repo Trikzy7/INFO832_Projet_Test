@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: timer.TimeBoundedTimerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in timer.TimeBoundedTimerTest
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in timer.TimeBoundedTimerTest
 testHasNextFinished  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at timer.TimeBoundedTimerTest.testHasNextFinished(TimeBoundedTimerTest.java:35)
