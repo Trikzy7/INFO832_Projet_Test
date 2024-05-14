@@ -1,20 +1,18 @@
 package action;
 
-import org.junit.Before;
-import org.junit.Test;
-import timer.OneShotTimer;
-import java.lang.reflect.Field;
-import java.util.TreeSet;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import java.lang.reflect.Method;
-import static org.junit.Assert.assertNotSame;
-
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import timer.OneShotTimer;
+
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.TreeSet;
 import java.util.Vector;
 import static org.junit.jupiter.api.Assertions.*;
+
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
 
 
 
@@ -24,7 +22,7 @@ public class DiscreteActionDependentTest {
     private Runnable o;
     private OneShotTimer timerDependence;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         o = () -> {};
         timerDependence = new OneShotTimer(1);
