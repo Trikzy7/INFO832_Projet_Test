@@ -67,10 +67,11 @@ public class DiscreteActionTest {
     @Test
     public void testNextMethodUpdatesLapsTime() {
 
-        //action = new DiscreteAction(testObject, methodName, mockTimer);
+        Timer mockTimer = new OneShotTimer(1);
+        action = new DiscreteAction(testObject, methodName, mockTimer);
 
         // Set the initial lapsTime
-        //action.setCurrentLapsTime(initialLapsTime); // there is no method to set LapsTime
+        action.setCurrentLapsTime(initialLapsTime); // there is no method to set LapsTime
 
         // Capture the old lapsTime before calling next()
         Integer oldLapsTime = action.getCurrentLapsTime();
