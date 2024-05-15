@@ -55,8 +55,8 @@ public class DiscreteActionTest {
     public void testSpendTime() {
         // Given
         int timeToSpend = 5;
+        action.setCurrentLapsTime(initialLapsTime);
         Integer expectedLapsTime = initialLapsTime - timeToSpend;
-
         // When
         action.spendTime(timeToSpend);
 
