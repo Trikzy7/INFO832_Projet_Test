@@ -13,12 +13,12 @@ class PeriodicTimerTest {
 
 
     @Test
-    void testHasNextFinished() {
+    void testHasNextAlwaysTrue() {
         PeriodicTimer pt = new PeriodicTimer(3);
         pt.next();
         pt.next();
         pt.next();
-        assertFalse(pt.hasNext());
+        assertTrue(pt.hasNext());  // Vérifie que hasNext est toujours vrai
     }
 
     @Test
@@ -30,9 +30,9 @@ class PeriodicTimerTest {
     @Test
     void testNext(){
         PeriodicTimer pt = new PeriodicTimer(10);
-        pt.next();
-        int next = pt.next();
-
-        assertEquals(3, next);
+        assertEquals((Integer)10, pt.next());
+        assertEquals((Integer)10, pt.next());
     }
+
+
 }
