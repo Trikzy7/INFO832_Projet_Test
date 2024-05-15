@@ -102,8 +102,8 @@ public class DiscreteActionTest {
         DiscreteAction action2 = new DiscreteAction(testObject, methodName, timer);
 
 
-
         int comparisonResult = action1.compareTo(action2);
+        System.out.println(comparisonResult);
 
         assertEquals("Deux actions avec lapsTime à null devraient être considérées comme égales (0)", 0, comparisonResult);
         System.out.println("Le test testCompareToWithBothLapsTimeNull a été exécuté avec succès. Résultat de la comparaison : " + comparisonResult);

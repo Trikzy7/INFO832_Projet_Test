@@ -92,20 +92,24 @@ public class DiscreteAction implements DiscreteActionInterface {
 
 	// COMPARAISON
 	public int compareTo(DiscreteActionInterface c) {
-		if (this.lapsTime == null) { // no lapstime is equivalent to infinity 
+		System.out.println("Comparing " + this.lapsTime + " with " + c.getCurrentLapsTime() + "\n");
+		if ((this.lapsTime == null) &&  (c.getCurrentLapsTime() != null)) { // no lapstime is equivalent to infinity
 			return 1;
 		}
-		if (c.getCurrentLapsTime() == null) {// no lapstime is equivalent to infinity 
+		if ((c.getCurrentLapsTime() == null) && (this.lapsTime != null)) {// no lapstime is equivalent to infinity
 			return -1;
 		}
-    	if(this.lapsTime > c.getCurrentLapsTime()){
-    		return 1;
-    	}
-    	if(this.lapsTime < c.getCurrentLapsTime()){
-    		return -1;
-    	}
-		if(this.lapsTime == c.getCurrentLapsTime()){
-			return 0;
+		if(this.lapsTime != null && c.getCurrentLapsTime() != null){
+			if(this.lapsTime > c.getCurrentLapsTime()){
+				return 1;
+			}
+			if(this.lapsTime < c.getCurrentLapsTime()){
+				return -1;
+			}
+			if(this.lapsTime == c.getCurrentLapsTime()){
+				return 0;
+			}
+
 		}
 		return 0;
 	}
