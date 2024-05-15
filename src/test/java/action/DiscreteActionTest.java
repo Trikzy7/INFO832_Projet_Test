@@ -92,6 +92,9 @@ public class DiscreteActionTest {
     public void testCompareToWithNullCurrentLapsTime() {
         DiscreteAction actionWithNullLapsTime = new DiscreteAction(testObject, methodName, timer);
         DiscreteAction anotherAction = new DiscreteAction(testObject, methodName, timer);
+        anotherAction.setCurrentLapsTime(5);
+        System.out.println("actionWithNullLapsTime : " + actionWithNullLapsTime.getCurrentLapsTime());
+        System.out.println("anotherAction : " + anotherAction.getCurrentLapsTime());
         int comparisonResult = actionWithNullLapsTime.compareTo(anotherAction);
         assertEquals("Un lapsTime null devrait être considéré comme infini et donc supérieur", 1, comparisonResult);
         System.out.println("Le test testCompareToWithNullCurrentLapsTime a été exécuté avec succès. Résultat de la comparaison : " + comparisonResult);
