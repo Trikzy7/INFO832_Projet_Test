@@ -95,28 +95,37 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		}
 	}
 
+
 	public void nextAction(){
 		if (this.currentAction == this.onAction){
 			this.currentAction = this.offAction;
-			this.currentAction = this.currentAction.next();
-			this.lastOffDelay = this.currentAction.getCurrentLapsTime();
 		}else{
 			this.currentAction = this.onAction;
-			this.currentAction = this.currentAction.next();
-			this.currentAction.spendTime(this.lastOffDelay);
 		}
+		this.currentLapsTime = this.currentAction.getCurrentLapsTime();
+		this.lastOffDelay = this.currentLapsTime;
 	}
 
-	public	void spendTime(int t) {
-		this.currentAction.spendTime(t);
+	public void spendTime(int t) {
+		if (t < 0) {
+			throw new IllegalArgumentException("Time cannot be negative");
+		}
+		if (this.getCurrentLapsTime() == null) {
+			this.currentLapsTime = t;
+		}
+		else {
+			this.currentLapsTime += t;
+		}
+//		this.currentLapsTime += t;
 	}
 
 	public Method getMethod() {
 		return this.currentAction.getMethod();
 	}
 
+	@Override
 	public Integer getCurrentLapsTime() {
-		return this.currentAction.getCurrentLapsTime();
+		return this.currentLapsTime;
 	}
 
 	public Object getObject() {
@@ -126,7 +135,7 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 	public int compareTo(DiscreteActionInterface c) {
 		return this.currentAction.compareTo(c);
 	}
-	
+
 	public DiscreteActionInterface next() {
 		this.nextAction();
 		return this;
