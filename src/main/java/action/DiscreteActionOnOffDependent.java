@@ -36,11 +36,15 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		
 		this.currentAction = this.onAction;
 	}*/
-	
+
 	public DiscreteActionOnOffDependent(Object o, String on, Timer timerOn, String off, Timer timerOff){
-		this.onAction = new DiscreteAction(o, on, timerOn);
-		this.offAction = new DiscreteAction(o, off, timerOff);
-		
+		if (timerOn.hasNext() && timerOff.hasNext()) {
+			this.onAction = new DiscreteAction(o, on, timerOn);
+			this.offAction = new DiscreteAction(o, off, timerOff);
+		} else {
+			throw new IllegalArgumentException("Both timerOn and timerOff should have at least one laps time");
+		}
+
 		this.currentAction = this.offAction;
 		this.currentLapsTime = 0;
 	}
@@ -98,9 +102,13 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 
 	public void nextAction(){
 		if (this.currentAction == this.onAction){
-			this.currentAction = this.offAction;
+			if (this.offAction.getMethod() != null) {
+				this.currentAction = this.offAction;
+			}
 		}else{
-			this.currentAction = this.onAction;
+			if (this.onAction.getMethod() != null) {
+				this.currentAction = this.onAction;
+			}
 		}
 		this.currentLapsTime = this.currentAction.getCurrentLapsTime();
 		this.lastOffDelay = this.currentLapsTime;

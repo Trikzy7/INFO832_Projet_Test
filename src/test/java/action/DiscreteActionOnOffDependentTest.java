@@ -24,16 +24,19 @@ public class DiscreteActionOnOffDependentTest {
         Method offMethod = Object.class.getMethod("hashCode");
 
         // Création de l'objet DiscreteActionOnOffDependent
-        discreteAction = new DiscreteActionOnOffDependent(new Object(), "on", datesOn, "off", datesOff);
+        discreteAction = new DiscreteActionOnOffDependent(new Object(), "toString", datesOn, "hashCode", datesOff);
     }
 
     @Test
     public void testNextMethodChange() {
         // Stockage de la méthode initiale
-        Method initialMethod = discreteAction.getMethod();
 
+        Method initialMethod = discreteAction.getMethod();
+        System.out.println("caca");
+        System.out.println(discreteAction.getMethod());
         // Appels successifs à next et vérification des changements
         for (int i = 0; i < 5; i++) {
+
             discreteAction.next();
             Method newMethod = discreteAction.getMethod();
             assertNotEquals(initialMethod, newMethod);

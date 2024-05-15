@@ -15,3 +15,7 @@ b
 ,src/test/java/action/DiscreteActionTest.java,b\e\be0864ea93eb462c624962d46790ae41105a49e0
 X
 (src/main/java/action/DiscreteAction.java,a\0\a0a18e3260fac1b72007885642f53f7a3e7bf58f
+j
+:src/test/java/action/DiscreteActionOnOffDependentTest.java,2\0\20ed66d4e2437c8092474d42fac6b6aab6a5f6c1
+f
+6src/main/java/action/DiscreteActionOnOffDependent.java,7\3\734b16ff9d959a10db85c22dd12706615980c7cd
