@@ -1,25 +1,11 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import action.DiscreteActionInterface;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
-import java.util.Comparator;
-import java.util.Vector;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static org.mockito.Mockito.verify;import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static org.mockito.Mockito.*;
 

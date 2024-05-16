@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import org.junit.jupiter.api.Test;
 

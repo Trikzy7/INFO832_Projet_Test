@@ -21,3 +21,11 @@ f
 6src/main/java/action/DiscreteActionOnOffDependent.java,7\3\734b16ff9d959a10db85c22dd12706615980c7cd
 j
 :src/main/java/discreteBehaviorSimulator/ClockObserver.java,0\1\01c87fae1215a381ebf46a8f84dd0ab4fc84996d
+b
+2src/main/java/discretebehaviorsimulator/Clock.java,6\2\62a0b95418301284d8125df2ac33c55b1c5f73c4
+j
+:src/main/java/discretebehaviorsimulator/ClockObserver.java,0\9\095c144e30e4b82165c1d39f728ee507a539919f
+t
+Dsrc/main/java/discretebehaviorsimulator/DiscreteActionSimulator.java,4\1\416a7cea790e08f85ec229e9c07b4640387d1a42
+i
+9src/main/java/discretebehaviorsimulator/LogFormatter.java,5\b\5bc5a468d7d9baed80d5210ecd1ec4b00f640882

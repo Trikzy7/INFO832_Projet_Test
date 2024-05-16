@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 
 import java.util.Date;
@@ -26,7 +26,7 @@ public class Clock {
 		this.nextJump=0;
 		this.lock = new ReentrantReadWriteLock();
 		this.virtual = true;
-		this.observers = new HashSet<ClockObserver>();
+		this.observers = new HashSet<>();
 	}
 	
 	public static Clock getInstance() {
@@ -77,31 +77,19 @@ public class Clock {
 			o.nextClockChange(this.nextJump);
 		}
 	}
-	/*public void setTime(int time) throws IllegalAccessException {
-		this.lock.lock();
-		if (this.time < time) {
-			this.time = time;
-			for(ClockObserver o:this.observers) {
-				o.ClockChange();
-			}
-		}else{
-			this.lock.unlock();
-			throw new IllegalAccessException("Set time error, cannot go back to the past !!!");
-		}
-		this.lock.unlock();
-	}*/
+
 	/**
 	 * Increases the current time of the clock by a specified amount.
 	 *
 	 * @param time The amount of time to add to the current time. Must be equal to the next jump time.
-	 * @throws Exception if the provided time is not equal to the next jump time.
+	 * @throws IllegalStateException if the provided time is not equal to the next jump time.
 	 */
-	public void increase(int time) throws Exception {
+	public void increase(int time) throws IllegalStateException {
 
 		this.lockWriteAccess();
 
 		if(time != this.nextJump) {
-			throw new Exception("Unexpected time change");
+			throw new IllegalStateException("Unexpected time change");
 		}
 		this.time += time;
 		for(ClockObserver o:this.observers) {

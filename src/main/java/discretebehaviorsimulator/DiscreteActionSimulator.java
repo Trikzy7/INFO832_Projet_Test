@@ -1,7 +1,8 @@
 
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
 import java.util.logging.ConsoleHandler;
@@ -9,7 +10,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import action.DiscreteAction;
 import action.DiscreteActionInterface;
 
 
@@ -26,7 +26,7 @@ public class DiscreteActionSimulator implements Runnable {
 	
 	private Clock globalTime;
 	
-	private Vector<DiscreteActionInterface> actionsList = new Vector<>();
+	private ArrayList<DiscreteActionInterface> actionsList = new ArrayList<>();
 	
 	private int nbLoop;
 	private int step;
@@ -34,6 +34,7 @@ public class DiscreteActionSimulator implements Runnable {
 	private Logger logger;
 	private FileHandler logFile; 
 	private ConsoleHandler logConsole;
+
 	/**
 	 * Default constructor for the DiscreteActionSimulator class.
 	 * Initializes the logger, sets up the global clock instance, and prepares the thread for execution.
@@ -45,12 +46,10 @@ public class DiscreteActionSimulator implements Runnable {
 		
 		// Start logger
 		this.logger = Logger.getLogger("DAS");
-		//this.logger = Logger.getLogger("APP");
 		this.logger.setLevel(Level.ALL);
 		this.logger.setUseParentHandlers(true);
 		try{
 			this.logFile = new FileHandler(this.getClass().getName() + ".log");
-			//this.logFile.setFormatter(new SimpleFormatter());
 			this.logFile.setFormatter(new LogFormatter());
 			this.logConsole = new ConsoleHandler();
 		}catch(Exception e){
@@ -95,10 +94,7 @@ public class DiscreteActionSimulator implements Runnable {
 			Collections.sort(this.actionsList);
 		}
 	}
-	
-	/*public void addTemporalRule(TemporalRule r){
-		
-	}*/
+
 
 	/**
 	 * @return the laps time before the next action
@@ -114,8 +110,6 @@ public class DiscreteActionSimulator implements Runnable {
 		// Run the first action
 		int sleepTime = 0;
 
-
-		// TODO Manage parallel execution !  
 		DiscreteActionInterface currentAction = this.actionsList.get(0);
 		Object o = currentAction.getObject();
 		Method m = currentAction.getMethod();
@@ -129,13 +123,14 @@ public class DiscreteActionSimulator implements Runnable {
 				this.globalTime.increase(sleepTime);
 			}
 			m.invoke(o);
+			String messageStart = "[DAS] run action " + m.getName() + " on " + o.getClass().getName() + ":" + o.hashCode();
+			String messageEnd	= " after " + sleepTime + " time units\n";
 			if(this.globalTime!=null) {
-				this.logger.log(Level.FINE, "[DAS] run action " + m.getName() + " on " + o.getClass().getName() + ":" + o.hashCode() + " at " + this.globalTime.getTime() + " after " + sleepTime + " time units\n");
-				System.out.println("[DAS] run action " + m.getName() + " on " + o.getClass().getName() + ":" + o.hashCode() + " at " + this.globalTime.getTime() + " after " + sleepTime + " time units\n");
+				this.logger.log(Level.FINE, messageStart + " at " + this.globalTime.getTime() + messageEnd);
 			}else {
-				this.logger.log(Level.FINE, "[DAS] run action " + m.getName() + " on " + o.getClass().getName() + ":" + o.hashCode() + " after " + sleepTime + " time units\n");
-				System.out.println("[DAS] run action " + m.getName() + " on " + o.getClass().getName() + ":" + o.hashCode() + " after " + sleepTime + " time units\n");
-			
+				String msg = messageStart + messageEnd;
+				this.logger.log(Level.FINE, msg);
+
 			}
 			
 		}catch (Exception e) {
@@ -155,36 +150,20 @@ public class DiscreteActionSimulator implements Runnable {
 		
 		// update time laps off all actions
 		for(int i=1 ; i < this.actionsList.size(); i++){
-			//int d = this.actionsList.get(i).getLapsTime();
-			//this.actionsList.get(i).setLapsTemps(d- runningTimeOf1stCapsul);
 			this.actionsList.get(i).spendTime(runningTimeOf1stCapsul);
 		}
-
-		// get new time lapse of first action
-		/*if(this.globalTime == null) {
-			this.actionsList.get(0).updateTimeLaps();
-		}else {	
-			this.actionsList.get(0).updateTimeLaps(this.globalTime.getTime());
-		}
-		
-		// remove the action if no more lapse time is defined
-		if(this.actionsList.get(0).getLastLapsTime() == null) {
-			this.actionsList.remove(0);
-		}else {
-			// resort the list
-			Collections.sort(this.actionsList);
-		}*/
 
 		DiscreteActionInterface a = this.actionsList.remove(0);
 		if(a.hasNext()) {
 			a = a.next();
-			this.actionsList.addElement(a);
+			this.actionsList.add(a);
+			String msgStart = "[DAS] reset action " + a.getMethod().getName() + " on " + a.getObject().getClass().getName() + ":" + a.getObject().hashCode();
+			String msgEnd = " to " + a.getCurrentLapsTime() + " time units\n";
 			if(this.globalTime!=null) {
-				this.logger.log(Level.FINE, "[DAS] reset action " + a.getMethod().getName() + " on " + a.getObject().getClass().getName() + ":" + a.getObject().hashCode() + " at " + this.globalTime.getTime() + " to " + a.getCurrentLapsTime() + " time units\n");
-				System.out.println("[DAS] reset action " + a.getMethod().getName() + " on " + a.getObject().getClass().getName() + ":" + a.getObject().hashCode() + " at " + this.globalTime.getTime() + " to " + a.getCurrentLapsTime() + " time units\n");
+				this.logger.log(Level.FINE, msgStart + " at " + this.globalTime.getTime() + msgEnd);
 			}else {
-				this.logger.log(Level.FINE, "[DAS] reset action " + a.getMethod().getName() + " on " + a.getObject().getClass().getName() + ":" + a.getObject().hashCode() + " to " + a.getCurrentLapsTime() + " time units\n");
-				System.out.println("[DAS] reset action " + a.getMethod().getName() + " on " + a.getObject().getClass().getName() + ":" + a.getObject().hashCode() + " to " + a.getCurrentLapsTime() + " time units\n");
+				String msg = msgStart + msgEnd;
+				this.logger.log(Level.FINE, msg);
 			}
 			Collections.sort(this.actionsList);
 		}
@@ -200,12 +179,12 @@ public class DiscreteActionSimulator implements Runnable {
 		int count = this.nbLoop;
 		boolean finished = false;
 
-		System.out.println("LANCEMENT DU THREAD " + t.getName() + " \n");
+		String msg = "LANCEMENT DU THREAD " + t.getName() + " \n";
+		this.logger.log(Level.FINE, msg);
 
 		while(running && !finished){
 
 			if(!this.actionsList.isEmpty()){
-				System.out.println(this);
 				this.globalTime.setNextJump(this.nextLapsTime());
 				
 				this.globalTime.lockWriteAccess();
@@ -214,12 +193,13 @@ public class DiscreteActionSimulator implements Runnable {
 				this.globalTime.unlockWriteAccess();
 				try {
 					Thread.sleep(100);
-				}catch(Exception e) {
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
 					e.printStackTrace();
 				}
-				//TODO add global time synchronizer for action with list of date and avoid drift 
+
 			}else{
-				System.out.println("NOTHING TO DO\n");
+				this.logger.log(Level.FINE, "NOTHING TO DO\n");
 				this.stop();
 			}
 
@@ -230,9 +210,12 @@ public class DiscreteActionSimulator implements Runnable {
 		}
 		this.running = false;
 		if(this.step>0) {
-			System.out.println("DAS: " + (this.nbLoop - count) + " actions done for " + this.nbLoop + " turns asked.");
+			String msg1 = "DAS: " + (this.nbLoop - count) + " actions done for " + this.nbLoop + " turns asked.";
+			this.logger.log(Level.FINE, msg1);
 		}else {
-			System.out.println("DAS: " + (count) + " actions done!");			
+			String msg2 = "DAS: " + (count) + " actions done!";
+			this.logger.log(Level.FINE, msg2);
+
 		}
 	}
 	/**
@@ -249,7 +232,8 @@ public class DiscreteActionSimulator implements Runnable {
 	 */
 
 	public void stop(){
-		System.out.println("STOP THREAD " + t.getName() + "obj " + this);
+		String msg = "STOP THREAD " + t.getName() + "obj " + this;
+		this.logger.log(Level.FINE, msg);
 		this.running = false;
 	}
 
@@ -264,7 +248,7 @@ public class DiscreteActionSimulator implements Runnable {
 		if (this.actionsList.isEmpty()){
 			return "No actions";
 		}
-		StringBuffer toS = new StringBuffer("------------------\nTestAuto :" + this.actionsList.size());
+		StringBuilder toS = new StringBuilder("------------------\nTestAuto :" + this.actionsList.size());
 		for(DiscreteActionInterface c : this.actionsList){
 			toS.append(c.toString() + "\n");
 		}

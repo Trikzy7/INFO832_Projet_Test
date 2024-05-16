@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,7 +19,7 @@ public class LogFormatter  extends Formatter {
 	 * @return The formatted string.
 	 */
 	public String format(LogRecord rec) {
-		StringBuffer buf = new StringBuffer();
+		StringBuilder buf = new StringBuilder();
 		
 		buf.append(calcDate(rec.getMillis()));
 		buf.append(": ");
@@ -38,17 +38,19 @@ public class LogFormatter  extends Formatter {
 	 * @return The formatted date string.
 	 */
 	private String calcDate(long millisecs) {
-	    SimpleDateFormat date_format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss.SS");
+	    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss.SS");
 	    Date resultdate = new Date(millisecs);
-	    return date_format.format(resultdate);
+	    return dateFormat.format(resultdate);
 	  }
 
+	@Override
 	  // this method is called just after the handler using this
 	  // formatter is created
 	  public String getHead(Handler h) {
 		  return "";
 	  }
-	  
+
+	  @Override
 	// this method is called just after the handler using this
 	  // formatter is closed
 	  public String getTail(Handler h) {

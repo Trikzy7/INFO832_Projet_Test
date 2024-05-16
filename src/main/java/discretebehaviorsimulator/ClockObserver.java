@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 public interface ClockObserver {
 	/**
