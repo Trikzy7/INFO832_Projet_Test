@@ -38,7 +38,7 @@ public class TimeBoundedTimer implements Timer {
 
 	@Override
 	public boolean hasNext() {
-		return this.hasNext;
+		return this.hasNext ;
 	}
 
 	@Override
@@ -47,6 +47,7 @@ public class TimeBoundedTimer implements Timer {
 		this.time+=this.next;
 		if(this.time < this.stopTime) {
 			this.next = this.timer2bound.next();
+			this.hasNext=false;
 		}else {
 			next = null;
 			this.hasNext=false;
