@@ -1,14 +1,15 @@
 package timer;
 
-public class MergedTimer implements Timer {
-	private Timer timer1;
-	private Timer timer2;
+public class MergedTimer implements Timer{
+
+	private Timer timer1; // The first timer
+	private Timer timer2; // The second timer
 
 	/**
-	 * Constructs a MergedTimer by merging two timers.
+	 * Constructs a MergedTimer with two timers to merge.
 	 *
-	 * @param timer1 The first timer to be merged.
-	 * @param timer2 The second timer to be merged.
+	 * @param timer1 The first timer to merge.
+	 * @param timer2 The second timer to merge.
 	 */
 	public MergedTimer(Timer timer1, Timer timer2) {
 		this.timer1 = timer1;
@@ -16,9 +17,9 @@ public class MergedTimer implements Timer {
 	}
 
 	/**
-	 * Checks if both timers have next values.
+	 * Checks if the MergedTimer has a next value.
 	 *
-	 * @return True if both timers have next values, otherwise false.
+	 * @return True if both timers have a next value, otherwise false.
 	 */
 	@Override
 	public boolean hasNext() {
@@ -26,15 +27,16 @@ public class MergedTimer implements Timer {
 	}
 
 	/**
-	 * Retrieves the sum of next values from both timers.
+	 * Retrieves the next value from the MergedTimer by summing the next values of both timers.
 	 *
-	 * @return The sum of next values from both timers, or null if any of the timers has no next value.
+	 * @return The sum of the next values from both timers, or null if either timer has no next value.
 	 */
 	@Override
 	public Integer next() {
-		if (this.hasNext()) {
+		if(this.hasNext()) {
 			return this.timer1.next() + this.timer2.next();
 		}
 		return null;
 	}
+
 }
