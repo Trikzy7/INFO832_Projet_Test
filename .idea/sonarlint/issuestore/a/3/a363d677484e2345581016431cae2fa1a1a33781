@@ -1,16 +1,5 @@
 
-^
-java:S6355"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(ıà˙ö
-K
-java:S1133"5Do not forget to remove this deprecated code someday.(…¿¸˘
->
-java:S1123"(Add the missing @deprecated Javadoc tag.(…¿¸˘
-^
-java:S6355'"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(ıà˙ö
-K
-java:S1133("5Do not forget to remove this deprecated code someday.(°≤πÏ
->
-java:S1123("(Add the missing @deprecated Javadoc tag.(°≤πÏ
-M
-java:S11176"7Rename "next" which hides the field declared at line 6.(—ﬂÛ‚
-P	java:S125B"<This block of commented-out lines of code should be removed.(“àùc
+k
+java:S2272$"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(˛ˇ¯Î8”Œ–Ü¯1
+E
+java:S1068"(Remove this unused "next" private field.(Ñõ±Ë8◊Œ–Ü¯1
