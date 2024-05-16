@@ -1,6 +1,6 @@
-projectKey=INFO832_theo
+projectKey=INFO832_Projet_theo
 serverUrl=http://gpu-epu.univ-savoie.fr:9000
 serverVersion=9.9.4.87374
-dashboardUrl=http://gpu-epu.univ-savoie.fr:9000/dashboard?id=INFO832_theo
-ceTaskId=AY8WrHGv_bPRbRUbaIU-
-ceTaskUrl=http://gpu-epu.univ-savoie.fr:9000/api/ce/task?id=AY8WrHGv_bPRbRUbaIU-
+dashboardUrl=http://gpu-epu.univ-savoie.fr:9000/dashboard?id=INFO832_Projet_theo
+ceTaskId=AY93ZdDL_bPRbRUbaIVY
+ceTaskUrl=http://gpu-epu.univ-savoie.fr:9000/api/ce/task?id=AY93ZdDL_bPRbRUbaIVY

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="action.DiscreteActionOnOffDependentTest" time="0.008" tests="3" errors="0" skipped="0" failures="0">
+  <properties/>
+  <testcase name="testSpendTimeWithNegativeInput" classname="action.DiscreteActionOnOffDependentTest" time="0.003"/>
+  <testcase name="testSpendTime" classname="action.DiscreteActionOnOffDependentTest" time="0.001"/>
+  <testcase name="testNextMethodChange" classname="action.DiscreteActionOnOffDependentTest" time="0.002"/>
+</testsuite>
