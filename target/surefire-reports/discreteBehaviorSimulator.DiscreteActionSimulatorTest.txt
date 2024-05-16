@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: discreteBehaviorSimulator.DiscreteActionSimulatorTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.696 s - in discreteBehaviorSimulator.DiscreteActionSimulatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.768 s - in discreteBehaviorSimulator.DiscreteActionSimulatorTest

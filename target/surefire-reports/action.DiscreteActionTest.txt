@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: action.DiscreteActionTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.037 s <<< FAILURE! - in action.DiscreteActionTest
-testSpendTime  Time elapsed: 0.003 s  <<< FAILURE!
-java.lang.AssertionError: LapsTime should not be null after spendTime
-	at action.DiscreteActionTest.testSpendTime(DiscreteActionTest.java:64)
-
-testNextMethodUpdatesLapsTime  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NullPointerException
-	at action.DiscreteActionTest.testNextMethodUpdatesLapsTime(DiscreteActionTest.java:79)
-
-testCompareToWithBothLapsTimeNull  Time elapsed: 0.003 s  <<< FAILURE!
-java.lang.AssertionError: Deux actions avec lapsTime à null devraient être considérées comme égales (0) expected:<0> but was:<1>
-	at action.DiscreteActionTest.testCompareToWithBothLapsTimeNull(DiscreteActionTest.java:108)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in action.DiscreteActionTest

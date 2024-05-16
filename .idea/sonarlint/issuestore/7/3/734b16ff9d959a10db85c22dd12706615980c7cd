@@ -1,24 +1,24 @@
 
 Œ
-java:S1319T"jThe type of "datesOn" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8µ…¨Ûè1
+java:S1319T"jThe type of "datesOn" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8—¸Íİ÷1
 
-java:S1319T"kThe type of "datesOff" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8¸…¨Ûè1
+java:S1319T"kThe type of "datesOff" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(À¸ñşÿÿÿÿ8—¸Íİ÷1
 x
 java:S1450"[Remove the "lastOffDelay" field and declare it as a local variable in the relevant methods.(‹àåÓ8İº…İ÷1
 ‡
-java:S11494"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8ë‡¨Ûè1
+java:S11494"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8º¸Íİ÷1
 ‡
-java:S11494"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8î‡¨Ûè1
+java:S11494"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùŸûÿÿÿÿ8º¸Íİ÷1
 ‡
-java:S11495"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùÀÅÇıÿÿÿÿ8î‡¨Ûè1
+java:S11495"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ùÀÅÇıÿÿÿÿ8º¸Íİ÷1
 X	java:S125!"<This block of commented-out lines of code should be removed.(ı…ªì8‚ˆ¨Ûè1
 [
-java:S1155A">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8²ˆ¨Ûè1
+java:S1155A">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8¾¸Íİ÷1
 [
-java:S1155A">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8³ˆ¨Ûè1
-]	java:S125U"<This block of commented-out lines of code should be removed.(¬Šüÿúÿÿÿÿ8àˆ¨Ûè1
+java:S1155A">Use isEmpty() to check whether the collection is empty or not.(€‡ä§8¾¸Íİ÷1
+]	java:S125U"<This block of commented-out lines of code should be removed.(¬Šüÿúÿÿÿÿ8À¸Íİ÷1
 ]	java:S125"<This block of commented-out lines of code should be removed.(ğÑçÊıÿÿÿÿ8éº…İ÷1
 M
 java:S1068"0Remove this unused "lastOffDelay" private field.(‹àåÓ8ïº…İ÷1
 V
-java:S11444"4Remove this unused private "dates2Timalapse" method.(ùŸûÿÿÿÿ8‰¨Ûè1
+java:S11444"4Remove this unused private "dates2Timalapse" method.(ùŸûÿÿÿÿ8Å¸Íİ÷1

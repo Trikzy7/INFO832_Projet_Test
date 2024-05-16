@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="timer.RandomTimerTest" time="0.004" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="timer.RandomTimerTest" time="0.016" tests="2" errors="0" skipped="0" failures="0">
   <properties/>
-  <testcase name="testNext" classname="timer.RandomTimerTest" time="0.003"/>
-  <testcase name="testDistribution2String" classname="timer.RandomTimerTest" time="0"/>
+  <testcase name="testNext" classname="timer.RandomTimerTest" time="0.012"/>
+  <testcase name="testDistribution2String" classname="timer.RandomTimerTest" time="0.001"/>
 </testsuite>

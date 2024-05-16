@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: action.DiscreteActionOnOffDependentTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.214 s <<< FAILURE! - in action.DiscreteActionOnOffDependentTest
-testSpendTimeWithNegativeInput  Time elapsed: 0.148 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
-	at action.DiscreteActionOnOffDependentTest.testSpendTimeWithNegativeInput(DiscreteActionOnOffDependentTest.java:121)
-
-testSpendTime  Time elapsed: 0.038 s  <<< ERROR!
-java.lang.NullPointerException
-	at action.DiscreteActionOnOffDependentTest.testSpendTime(DiscreteActionOnOffDependentTest.java:52)
-
-testNextMethodChange  Time elapsed: 0.026 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: not equal but was: <null>
-	at action.DiscreteActionOnOffDependentTest.testNextMethodChange(DiscreteActionOnOffDependentTest.java:39)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in action.DiscreteActionOnOffDependentTest
