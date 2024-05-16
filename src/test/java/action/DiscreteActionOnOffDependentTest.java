@@ -32,7 +32,6 @@ public class DiscreteActionOnOffDependentTest {
         // Stockage de la méthode initiale
 
         Method initialMethod = discreteAction.getMethod();
-        System.out.println("caca");
         System.out.println(discreteAction.getMethod());
         // Appels successifs à next et vérification des changements
         for (int i = 0; i < 5; i++) {
