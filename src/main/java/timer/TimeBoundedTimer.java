@@ -6,9 +6,9 @@ package timer;
  */
 public class TimeBoundedTimer implements Timer {
 
-	private Timer timer2bound; // The timer to be bounded
-	private Integer startTime; // The start time of the interval
-	private Integer stopTime; // The stop time of the interval
+	private final Timer timer2bound; // The timer to be bounded
+	private final Integer startTime; // The start time of the interval
+	private final Integer stopTime; // The stop time of the interval
 
 	private Integer next = 0; // The next value of the timer
 	private int time = 0; // The accumulated time
