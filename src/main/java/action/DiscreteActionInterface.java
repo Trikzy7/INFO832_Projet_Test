@@ -3,9 +3,6 @@ package action;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 
-/*
- * TODO must implement Iterator<Action>
- */
 public interface DiscreteActionInterface extends Comparable<DiscreteActionInterface>, Iterator<DiscreteActionInterface>{
 
 	/*
@@ -46,5 +43,4 @@ public interface DiscreteActionInterface extends Comparable<DiscreteActionInterf
 	 * (non-Javadoc)
 	 * @see java.util.Iterator#hasNext()
 	 */
-	//public boolean hasNext();
 }

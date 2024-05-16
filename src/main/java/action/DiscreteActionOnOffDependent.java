@@ -1,8 +1,8 @@
 package action;
 
 import java.lang.reflect.Method;
+import java.util.SortedSet;
 import java.util.TreeSet;
-import java.util.Vector;
 
 import timer.DateTimer;
 import timer.Timer;
@@ -18,11 +18,10 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 	protected DiscreteActionInterface currentAction;
 	
 	private Integer currentLapsTime;
-	private Integer lastOffDelay=0;
 	
 	/**
 	 * Construct an On Off dependence, first action (method) called is On, then method nextMethod() is called to select the next action.
-	 * The default behavior of nextMethod() is to switch between On and Off actions.  It can be change by overloading. 
+	 * The default behavior of nextMethod() is to switch between On and Off actions.  It can be changed by overloading.
 	 * 
 	 * @param o
 	 * @param on
@@ -30,13 +29,6 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 	 * @param off
 	 * @param timerOff
 	 */
-	/*public DiscreteActionOnOffDependent(Wo o, Method on, Timer timerOn, Method off, Timer timerOff){
-		this.onAction = new DiscreteAction(o, on, timerOn);
-		this.offAction = new DiscreteAction(o, off, timerOff);
-		
-		this.currentAction = this.onAction;
-	}*/
-
 	public DiscreteActionOnOffDependent(Object o, String on, Timer timerOn, String off, Timer timerOff){
 		if (timerOn.hasNext() && timerOff.hasNext()) {
 			this.onAction = new DiscreteAction(o, on, timerOn);
@@ -48,50 +40,21 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		this.currentAction = this.offAction;
 		this.currentLapsTime = 0;
 	}
-	
-	private void dates2Timalapse(TreeSet<Integer> datesOn, TreeSet<Integer> datesOff, Vector<Integer> timeLapseOn, Vector<Integer> timeLapseOff) {
-		Vector<Integer> currentTimeLapse;
-		TreeSet<Integer> currentDates;
-		Integer date=0;
-		if(datesOn.first()<datesOff.first()) {
-			currentTimeLapse = timeLapseOn;
-			currentDates = datesOn;
-		}else {
-			currentTimeLapse = timeLapseOff;	
-			currentDates = datesOff;		
-		}
-		Integer nextDate;
-		
-		while(datesOn.size()>0 || datesOff.size()>0) {
-			nextDate = currentDates.first();
-		
-			currentTimeLapse.add(nextDate - date);
-			currentDates.remove(nextDate);
-		
-			date = nextDate;
-			
-			if(currentDates == datesOn) {
-				currentDates = datesOff;
-				currentTimeLapse = timeLapseOff;
-			}else {
-				currentDates = datesOn;
-				currentTimeLapse = timeLapseOn;			
-			}
-		}
-		
-	}
-	
-	public DiscreteActionOnOffDependent(Object o, String on, TreeSet<Integer> datesOn, String off, TreeSet<Integer> datesOff){
-		/*Vector<Integer> timeLapseOn = new Vector<Integer>();
-		Vector<Integer> timeLapseOff = new Vector<Integer>();
-		
-		dates2Timalapse((TreeSet<Integer>)datesOn.clone(), (TreeSet<Integer>)datesOff.clone(), timeLapseOn, timeLapseOff);
-		*/
-		this.onAction = new DiscreteAction(o, on, new DateTimer(datesOn));
-		this.offAction = new DiscreteAction(o, off, new DateTimer(datesOff));
-		
-		
-		
+
+	/**
+	 * Constructor for the DiscreteActionOnOffDependent class.
+	 * This class allows creating dependent discrete actions, activated and deactivated based on specified dates.
+	 *
+	 * @param o         The object on which the action will be executed.
+	 * @param on        The name of the action to be executed upon activation.
+	 * @param datesOn   A sorted set of dates for activating the action.
+	 * @param off       The name of the action to be executed upon deactivation.
+	 * @param datesOff  A sorted set of dates for deactivating the action.
+	 * @throws IllegalArgumentException If either set of dates is empty.
+	 */
+	public DiscreteActionOnOffDependent(Object o, String on, SortedSet<Integer> datesOn, String off, SortedSet<Integer> datesOff){
+		this.onAction = new DiscreteAction(o, on, new DateTimer((TreeSet<Integer>) datesOn));
+		this.offAction = new DiscreteAction(o, off, new DateTimer((TreeSet<Integer>) datesOff));
 		if(datesOn.first() < datesOff.first()){
 			this.currentAction = this.onAction;
 		}else{
@@ -99,7 +62,13 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		}
 	}
 
-
+	/**
+	 * Determines the next action to be executed based on the current state.
+	 * If the current action is 'onAction' and there is a method specified for 'offAction',
+	 * it switches to 'offAction'. If the current action is 'offAction' and there is a method specified for 'onAction',
+	 * it switches to 'onAction'.
+	 * Updates the current laps time to match the new action.
+	 */
 	public void nextAction(){
 		if (this.currentAction == this.onAction){
 			if (this.offAction.getMethod() != null) {
@@ -111,9 +80,14 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 			}
 		}
 		this.currentLapsTime = this.currentAction.getCurrentLapsTime();
-		this.lastOffDelay = this.currentLapsTime;
 	}
 
+	/**
+	 * Updates the current laps time by adding the specified amount of time.
+	 *
+	 * @param t The amount of time to be spent. It should be non-negative.
+	 * @throws IllegalArgumentException If the specified time is negative.
+	 */
 	public void spendTime(int t) {
 		if (t < 0) {
 			throw new IllegalArgumentException("Time cannot be negative");
@@ -124,7 +98,6 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		else {
 			this.currentLapsTime += t;
 		}
-//		this.currentLapsTime += t;
 	}
 
 	public Method getMethod() {
@@ -140,15 +113,31 @@ public class DiscreteActionOnOffDependent implements DiscreteActionInterface {
 		return this.currentAction.getObject();
 	}
 
+	/**
+	 * Compares this DiscreteActionInterface with the specified DiscreteActionInterface for order.
+	 *
+	 * @param c The DiscreteActionInterface to be compared.
+	 * @return A negative integer, zero, or a positive integer as this DiscreteActionInterface is less than, equal to, or greater than the specified DiscreteActionInterface.
+	 */
 	public int compareTo(DiscreteActionInterface c) {
 		return this.currentAction.compareTo(c);
 	}
 
+	/**
+	 * Executes the next action in the sequence and returns the current instance.
+	 *
+	 * @return The current instance after executing the next action.
+	 */
 	public DiscreteActionInterface next() {
 		this.nextAction();
 		return this;
 	}
-	
+
+	/**
+	 * Checks if there are remaining actions in either the 'onAction' or 'offAction' sequences.
+	 *
+	 * @return true if there are remaining actions, false otherwise.
+	 */
 	public boolean hasNext() {
 		return this.onAction.hasNext() || this.offAction.hasNext();		
 	}
