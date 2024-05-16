@@ -67,7 +67,7 @@ public class DiscreteActionTest {
     @Test
     public void testNextMethodUpdatesLapsTime() {
 
-        Timer mockTimer = new OneShotTimer(1);
+        Timer mockTimer = new OneShotTimer(2);
         action = new DiscreteAction(testObject, methodName, mockTimer);
 
         // Set the initial lapsTime
